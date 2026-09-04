@@ -3,25 +3,61 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0D0D1A;
+  --foreground: #F9FAFB;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+  background-color: #0D0D1A;
+  color: #F9FAFB;
+}
+
+::selection {
+  background: #7C3AED;
+  color: #FFFFFF;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7C3AED;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5B21B6;
+}
+
+/* Mesh Gradient Background */
+.mesh-gradient {
+  background: radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(249, 115, 22, 0.10) 0%, transparent 60%),
+              radial-gradient(ellipse at 60% 80%, rgba(37, 99, 235, 0.10) 0%, transparent 60%),
+              #0D0D1A;
+  background-size: 200% 200%;
+  animation: mesh-shift 8s ease infinite alternate;
+}
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333%);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
 }
