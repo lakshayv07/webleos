@@ -1,4 +1,4 @@
-export const BRAND_NAME = "Nexvora";
+export const BRAND_NAME = "Webleos";
 export const TAGLINE = "Modern Websites. Flat Price. Real Results.";
 export const WHATSAPP_NUMBER = "9461811297";
 export const WHATSAPP_BASE = `https://wa.me/${WHATSAPP_NUMBER}`;

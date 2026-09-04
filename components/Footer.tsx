@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Zap, MessageCircle, Mail, Heart } from "lucide-react";
+import Image from "next/image";
+import { MessageCircle, Mail, Heart } from "lucide-react";
 import { BRAND_NAME, WHATSAPP_BASE, WA_MESSAGES } from "@/lib/constants";
 import { useModal } from "@/context/ModalContext";
 
@@ -13,9 +14,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         {/* Column 1 — Brand */}
         <div className="space-y-4">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600 to-orange-500 flex items-center justify-center">
-              <Zap className="w-4 h-4 text-white fill-white" />
+          <div className="flex items-center gap-2.5">
+            <div className="relative w-8 h-8 rounded-lg bg-purple-900/30 border border-purple-500/30 flex items-center justify-center p-0.5 shadow-md overflow-hidden">
+              <Image
+                src="/webleos.png"
+                alt="Webleos Logo"
+                width={32}
+                height={32}
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="font-heading font-extrabold text-xl text-white">
               {BRAND_NAME}
@@ -56,7 +63,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href={`mailto:contact@nexvora.in`}
+              href={`mailto:contact@webleos.in`}
               className="p-2 rounded-lg bg-white/5 hover:bg-orange-500/20 text-gray-300 hover:text-orange-300 transition-colors"
               aria-label="Email"
             >
@@ -65,7 +72,7 @@ export default function Footer() {
           </div>
 
           <p className="text-xs text-gray-500 pt-2">
-            © 2025 Nexvora. All rights reserved.
+            © 2025 {BRAND_NAME}. All rights reserved.
           </p>
         </div>
 

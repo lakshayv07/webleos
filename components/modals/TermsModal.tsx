@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useModal } from "@/context/ModalContext";
+import { BRAND_NAME } from "@/lib/constants";
 
 export default function TermsModal() {
   const { activeModal, closeModal } = useModal();
@@ -72,7 +73,7 @@ export default function TermsModal() {
           <section>
             <h4 className="text-white font-semibold text-lg mb-2">5. Limitation of Liability</h4>
             <p>
-              Nexvora shall not be liable for third-party hosting downtime, domain registrar delays, or lost business revenue resulting from client-managed services.
+              {BRAND_NAME} shall not be liable for third-party hosting downtime, domain registrar delays, or lost business revenue resulting from client-managed services.
             </p>
           </section>
 

@@ -10,16 +10,16 @@ import { fadeInUp } from "@/lib/animations";
 
 export default function ComparisonMatrix() {
   const comparisonRows = [
-    { feature: "Total Cost", traditional: "₹15,000 – ₹25,000+", nexvora: "₹4,999 Flat ✓" },
-    { feature: "Delivery Time", traditional: "3 – 6 Weeks", nexvora: "72 Hours ✓" },
-    { feature: "Revision Policy", traditional: "Paid Extra", nexvora: "2 Free Rounds ✓" },
-    { feature: "Mobile Optimized", traditional: "Sometimes", nexvora: "Always ✓" },
-    { feature: "WhatsApp Click-CTA", traditional: "Rare", nexvora: "Built-in ✓" },
-    { feature: "Google Maps Embed", traditional: "Extra Cost", nexvora: "Included ✓" },
-    { feature: "Post-Launch Support", traditional: "Paid / Ghosted", nexvora: "Included ✓" },
-    { feature: "Hosting Help", traditional: "DIY", nexvora: "Guided Setup ✓" },
-    { feature: "Hidden Costs", traditional: "Very Common", nexvora: "Zero ✓" },
-    { feature: "Business Ownership", traditional: "Developer Holds", nexvora: "You Own Everything ✓" },
+    { feature: "Total Cost", traditional: "₹15,000 – ₹25,000+", webleos: "₹4,999 Flat ✓" },
+    { feature: "Delivery Time", traditional: "3 – 6 Weeks", webleos: "72 Hours ✓" },
+    { feature: "Revision Policy", traditional: "Paid Extra", webleos: "2 Free Rounds ✓" },
+    { feature: "Mobile Optimized", traditional: "Sometimes", webleos: "Always ✓" },
+    { feature: "WhatsApp Click-CTA", traditional: "Rare", webleos: "Built-in ✓" },
+    { feature: "Google Maps Embed", traditional: "Extra Cost", webleos: "Included ✓" },
+    { feature: "Post-Launch Support", traditional: "Paid / Ghosted", webleos: "Included ✓" },
+    { feature: "Hosting Help", traditional: "DIY", webleos: "Guided Setup ✓" },
+    { feature: "Hidden Costs", traditional: "Very Common", webleos: "Zero ✓" },
+    { feature: "Business Ownership", traditional: "Developer Holds", webleos: "You Own Everything ✓" },
   ];
 
   return (
@@ -72,7 +72,7 @@ export default function ComparisonMatrix() {
                   {row.traditional}
                 </td>
                 <td className="p-4 sm:p-6 text-green-400 font-semibold bg-purple-900/20 border-l border-r border-purple-500/20">
-                  {row.nexvora}
+                  {row.webleos}
                 </td>
               </tr>
             ))}

@@ -23,16 +23,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nexvora — Professional Landing Pages at ₹4,999",
+  title: "Webleos — Professional Landing Pages at ₹4,999",
   description:
     "Get a sleek, mobile-ready landing page for your business in 72 hours. Flat ₹4,999. No hidden costs.",
   openGraph: {
-    title: "Nexvora — Professional Landing Pages at ₹4,999",
+    title: "Webleos — Professional Landing Pages at ₹4,999",
     description:
       "Get a sleek, mobile-ready landing page for your business in 72 hours. Flat ₹4,999. No hidden costs.",
     type: "website",
     locale: "en_IN",
-    siteName: "Nexvora",
+    siteName: "Webleos",
   },
 };
 

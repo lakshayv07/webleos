@@ -10,7 +10,7 @@ export default function Testimonials() {
     {
       stars: 5,
       quote:
-        "I was paying ₹500/month for a broken Wix site that nobody could find. Nexvora built me a proper website in 3 days and my WhatsApp inquiries have tripled since launch.",
+        "I was paying ₹500/month for a broken Wix site that nobody could find. Webleos built me a proper website in 3 days and my WhatsApp inquiries have tripled since launch.",
       name: "Rajesh Agarwal",
       business: "Agarwal Medical Store, Kota",
       avatarBg: "bg-purple-600",
