@@ -23,13 +23,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Webleos — Professional Landing Pages at ₹4,999",
+  title: "Webleos — Professional Landing Pages at ₹14,999",
   description:
-    "Get a sleek, mobile-ready landing page for your business in 72 hours. Flat ₹4,999. No hidden costs.",
+    "Get a sleek, mobile-ready landing page for your business in 72 hours. Flat ₹14,999. No hidden costs.",
   openGraph: {
-    title: "Webleos — Professional Landing Pages at ₹4,999",
+    title: "Webleos — Professional Landing Pages at ₹14,999",
     description:
-      "Get a sleek, mobile-ready landing page for your business in 72 hours. Flat ₹4,999. No hidden costs.",
+      "Get a sleek, mobile-ready landing page for your business in 72 hours. Flat ₹14,999. No hidden costs.",
     type: "website",
     locale: "en_IN",
     siteName: "Webleos",
@@ -51,10 +51,10 @@ export default function RootLayout({
       addressRegion: "Rajasthan",
       addressCountry: "IN",
     },
-    priceRange: "₹4,999",
+    priceRange: "₹14,999",
     serviceType: "Web Design",
     description:
-      "Get a sleek, mobile-ready landing page for your business in 72 hours. Flat ₹4,999. No hidden costs.",
+      "Get a sleek, mobile-ready landing page for your business in 72 hours. Flat ₹14,999. No hidden costs.",
   };
 
   return (

@@ -181,7 +181,7 @@ export default function Portfolio() {
 
       <div className="mt-12 text-center flex flex-col items-center gap-4">
         <p className="text-gray-400 italic text-sm md:text-base font-body">
-          Every website shown above was delivered for ₹4,999. Yours is next.
+          Every website shown above was delivered for ₹14,999. Yours is next.
         </p>
 
         <WhatsAppButton

@@ -44,7 +44,7 @@ export default function FinalCTA() {
           <div className="pt-2 flex flex-col items-center gap-3">
             <WhatsAppButton
               message={WA_MESSAGES.final}
-              label="Start for ₹4,999 — Chat Now →"
+              label="Start for ₹14,999 — Chat Now →"
               size="lg"
               variant="primary"
             />

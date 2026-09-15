@@ -44,7 +44,7 @@ export default function Solution() {
                 </div>
 
                 <h3 className="font-heading font-extrabold text-2xl md:text-3xl text-white mb-4">
-                  Professional Landing Page — <span className="text-purple-400">₹4,999 Flat</span>
+                  Professional Landing Page — <span className="text-purple-400">₹14,999 Flat</span>
                 </h3>
 
                 <p className="font-body text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mb-6">
@@ -127,7 +127,7 @@ export default function Solution() {
                 </div>
 
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
-                  Priority Maintenance — <span className="text-green-400">₹799/mo</span>
+                  Priority Maintenance — <span className="text-green-400">₹1799/mo</span>
                 </h3>
 
                 <p className="font-body text-gray-400 text-sm leading-relaxed max-w-2xl">

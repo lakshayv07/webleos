@@ -88,7 +88,7 @@ export default function Hero() {
           transition={{ delay: 0.2 }}
           className="font-body text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed font-normal"
         >
-          Get a sleek, mobile-ready landing page for your business — flat ₹4,999, no surprises, no callbacks. Most clients go live in 72 hours.
+          Get a sleek, mobile-ready landing page for your business — flat ₹14,999, no surprises, no callbacks. Most clients go live in 72 hours.
         </motion.p>
 
         {/* CTA Buttons Row */}

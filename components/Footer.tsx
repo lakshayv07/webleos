@@ -44,7 +44,7 @@ export default function Footer() {
               <MessageCircle className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/ilakshayyy"
               className="p-2 rounded-lg bg-white/5 hover:bg-pink-500/20 text-gray-300 hover:text-pink-300 transition-colors"
               aria-label="Instagram"
             >
@@ -63,7 +63,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href={`mailto:contact@webleos.in`}
+              href={`mailto:lakshayv0784@gmail.com`}
               className="p-2 rounded-lg bg-white/5 hover:bg-orange-500/20 text-gray-300 hover:text-orange-300 transition-colors"
               aria-label="Email"
             >
@@ -84,7 +84,7 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm">
             <li>
               <a href="#services" className="hover:text-white transition-colors">
-                Landing Page (₹4,999)
+                Landing Page (₹14,999)
               </a>
             </li>
             <li>

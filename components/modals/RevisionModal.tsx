@@ -44,7 +44,7 @@ export default function RevisionModal() {
           <section>
             <h4 className="text-white font-semibold text-lg mb-2">1. What's Included</h4>
             <p>
-              Your ₹4,999 package includes 2 free revision rounds after viewing the initial preview link.
+              Your ₹14,999 package includes 2 free revision rounds after viewing the initial preview link.
             </p>
           </section>
 

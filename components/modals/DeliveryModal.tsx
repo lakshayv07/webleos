@@ -72,7 +72,7 @@ export default function DeliveryModal() {
           <section>
             <h4 className="text-white font-semibold text-lg mb-2">5. Guarantee Commitment</h4>
             <p>
-              If we miss the 72-hour guarantee through our own fault without client-caused delays, you receive a full refund of ₹4,999.
+              If we miss the 72-hour guarantee through our own fault without client-caused delays, you receive a full refund of ₹14,999.
             </p>
           </section>
         </div>

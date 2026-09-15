@@ -13,9 +13,9 @@ export default function PainPoints() {
       icon: TrendingDown,
       iconColor: "text-red-400",
       iconBg: "bg-red-500/10 border-red-500/20",
-      stat: "₹15,000 – ₹25,000+",
+      stat: "₹25,000 – ₹35,000+",
       title: "Web Developers Price You Out",
-      body: "Most local developers charge upwards of ₹15,000 for a basic website — before hidden costs, domain setup, or hosting. For a small clinic or shop, that's a month's salary just to exist online.",
+      body: "Most local developers charge upwards of ₹25,000 for a basic website — before hidden costs, domain setup, or hosting. For a small clinic or shop, that's a month's salary just to exist online.",
     },
     {
       icon: Clock,

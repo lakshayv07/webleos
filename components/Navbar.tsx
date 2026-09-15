@@ -33,11 +33,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#0D0D1A]/85 backdrop-blur-xl border-b border-purple-500/20 shadow-lg shadow-purple-500/5 py-3"
-          : "bg-transparent py-5"
-      }`}
+      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-[#0D0D1A]/85 backdrop-blur-xl border-b border-purple-500/20 shadow-lg shadow-purple-500/5 py-3"
+        : "bg-transparent py-5"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
@@ -73,7 +72,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <WhatsAppButton
             message={WA_MESSAGES.hero}
-            label="Get Started — ₹4,999"
+            label="Get Started — ₹14,999"
             size="sm"
           />
         </div>
@@ -114,7 +113,7 @@ export default function Navbar() {
               <div className="pt-2">
                 <WhatsAppButton
                   message={WA_MESSAGES.hero}
-                  label="Get Started — ₹4,999"
+                  label="Get Started — ₹14,999"
                   size="md"
                   className="w-full justify-center"
                 />

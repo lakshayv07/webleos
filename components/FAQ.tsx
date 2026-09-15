@@ -11,12 +11,12 @@ export default function FAQ() {
 
   const faqs = [
     {
-      q: "What exactly is included in the ₹4,999 landing page?",
+      q: "What exactly is included in the ₹14,999 website?",
       a: "A single-page, mobile-first website including: hero section with your business headline, services/features section, about section, contact section with WhatsApp click-to-chat, Google Maps embed, and footer. Built on modern web technologies — fast, secure, and fully responsive. Domain connection and hosting guidance included.",
     },
     {
       q: "Are there any hidden charges?",
-      a: "None. ₹4,999 is the complete price for your landing page. You'll pay separately for your domain name (typically ₹500–₹800/year from GoDaddy or Hostinger) and hosting (₹1,500–₹2,000/year). We guide you through both and can set it up for you at no extra charge.",
+      a: "None. ₹14,999 is the complete price for your website. You'll pay separately for your domain name (typically ₹500–₹800/year from GoDaddy or Hostinger) and hosting (₹1,500–₹2,000/year). We guide you through both and can set it up for you at no extra charge.",
     },
     {
       q: "How do revisions work?",

@@ -10,7 +10,7 @@ import { fadeInUp } from "@/lib/animations";
 
 export default function ComparisonMatrix() {
   const comparisonRows = [
-    { feature: "Total Cost", traditional: "₹15,000 – ₹25,000+", webleos: "₹4,999 Flat ✓" },
+    { feature: "Total Cost", traditional: "₹25,000 – ₹35,000+", webleos: "₹14,999 Flat ✓" },
     { feature: "Delivery Time", traditional: "3 – 6 Weeks", webleos: "72 Hours ✓" },
     { feature: "Revision Policy", traditional: "Paid Extra", webleos: "2 Free Rounds ✓" },
     { feature: "Mobile Optimized", traditional: "Sometimes", webleos: "Always ✓" },

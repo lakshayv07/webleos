@@ -19,7 +19,7 @@ export default function Testimonials() {
     {
       stars: 5,
       quote:
-        "I was quoted ₹22,000 by another developer. Same work, done in 72 hours, for ₹4,999. I wish I'd found them sooner. The mobile view is perfect.",
+        "I was quoted ₹28,000 by another developer. Same work, done in 72 hours, for ₹14,999. I wish I'd found them sooner. The mobile view is perfect.",
       name: "Priya Sharma",
       business: "Priya Beauty Clinic, Jaipur",
       avatarBg: "bg-pink-600",
