@@ -11,40 +11,61 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#7C3AED',
-          light: '#A78BFA',
-          dark: '#5B21B6',
+          DEFAULT: '#EAE6DE',
+          light: '#F5F1EB',
+          dark: '#DDD8CE',
         },
-        accent: {
-          DEFAULT: '#F97316',
-          light: '#FED7AA',
+        secondary: {
+          DEFAULT: '#226192',
+          light: '#357BAF',
+          dark: '#18476B',
+        },
+        tertiary: {
+          DEFAULT: '#EF8557',
+          light: '#F49F7B',
+          dark: '#D86B3E',
         },
         surface: {
-          DEFAULT: '#0D0D1A',
-          card: '#13132B',
-          border: '#1E1E3A',
+          DEFAULT: '#EAE6DE',
+          card: '#FFFFFF',
+          alt: '#F5F1EB',
+          border: '#D6D0C4',
+          'border-light': '#E5E0D6',
         },
-        muted: '#6B7280',
-        glass: 'rgba(255,255,255,0.05)',
+        ink: {
+          DEFAULT: '#1C1917',
+          muted: '#78716C',
+          subtle: '#A8A29E',
+        },
       },
       fontFamily: {
-        heading: ['var(--font-plus-jakarta)', 'Plus Jakarta Sans', 'sans-serif'],
-        body: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        heading: ['Arial', 'Helvetica Neue', 'sans-serif'],
+        body: ['Arial', 'Helvetica Neue', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+      },
+      letterSpacing: {
+        hero: '-0.075em',
+        h2: '-0.065em',
+        tightest: '-0.05em',
+      },
+      lineHeight: {
+        tightest: '0.85',
+        tight: '1.0',
+        relaxed: '1.85',
       },
       keyframes: {
-        'mesh-shift': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-12px)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
       animation: {
-        'mesh-shift': 'mesh-shift 8s ease infinite alternate',
-        float: 'float 4s ease-in-out infinite',
+        marquee: 'marquee 30s linear infinite',
+        float: 'float 5s ease-in-out infinite',
       },
     },
   },

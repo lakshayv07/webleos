@@ -1,216 +1,163 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React from "react";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import { Eye, Shield, Clock, RefreshCw, Zap } from "lucide-react";
-import { WA_MESSAGES } from "@/lib/constants";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
-import { fadeInUp, scaleIn } from "@/lib/animations";
+import { ArrowDownRight, Sparkles, Globe, ArrowUpRight } from "lucide-react";
+import { WA_MESSAGES, WHATSAPP_BASE, EMAIL } from "@/lib/constants";
+import MagneticButton from "@/components/ui/MagneticButton";
+
+// Dynamically import Three.js ParticleField with SSR disabled
+const ParticleField = dynamic(() => import("@/components/three/ParticleField"), {
+  ssr: false,
+  loading: () => null,
+});
 
 export default function Hero() {
-  // Generate 20 floating particles
-  const particles = useMemo(() => {
-    const colors = ["bg-purple-500", "bg-orange-500", "bg-blue-500"];
-    return Array.from({ length: 20 }).map((_, i) => ({
-      id: i,
-      size: Math.floor(Math.random() * 3) + 2, // 2px-4px
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
-      color: colors[i % colors.length],
-      duration: Math.random() * 4 + 4, // 4-8s
-      delay: Math.random() * 2,
-    }));
-  }, []);
-
   return (
-    <section className="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-center items-center pt-8 pb-16 px-4 overflow-hidden">
-      {/* Floating Particles */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {particles.map((p) => (
-          <motion.div
-            key={p.id}
-            initial={{ opacity: 0.1, y: 0 }}
-            animate={{
-              opacity: [0.1, 0.3, 0.1],
-              y: [0, -25, 0],
-            }}
-            transition={{
-              duration: p.duration,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: p.delay,
-            }}
-            style={{
-              top: p.top,
-              left: p.left,
-              width: `${p.size}px`,
-              height: `${p.size}px`,
-            }}
-            className={`absolute rounded-full ${p.color}`}
-          />
-        ))}
+    <section
+      id="hero"
+      className="relative min-h-screen w-full flex flex-col justify-between pt-32 pb-12 sm:pb-16 px-6 sm:px-10 lg:px-16 overflow-hidden bg-primary"
+    >
+      {/* 3D WebGL Particle System Background */}
+      <ParticleField />
+
+      {/* Subtle Ambient Radial Lighting */}
+      <div
+        className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full pointer-events-none opacity-40 blur-[120px] bg-secondary/15"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute bottom-10 left-10 w-[400px] h-[400px] rounded-full pointer-events-none opacity-30 blur-[100px] bg-tertiary/20"
+        aria-hidden="true"
+      />
+
+      {/* Top Meta Status Row */}
+      <div className="relative z-10 w-full flex flex-wrap items-center justify-between gap-4 border-b border-surface-border/60 pb-6">
+        <div className="flex items-center gap-3">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75" />
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary" />
+          </span>
+          <span className="font-mono text-xs uppercase tracking-widest text-ink-muted">
+            AVAILABLE FOR Q4 / Q1 COMMISSIONS
+          </span>
+        </div>
+
+        <div className="hidden sm:flex items-center gap-8 font-mono text-xs uppercase tracking-wider text-ink-muted">
+          <div className="flex items-center gap-2">
+            <Globe className="w-3.5 h-3.5 text-secondary" />
+            <span>WORLDWIDE CLIENTS</span>
+          </div>
+          <span>EST. 2024</span>
+          <span>WEBLEOS STUDIO 2.0</span>
+        </div>
       </div>
 
-      <div className="max-w-4xl mx-auto text-center z-10 flex flex-col items-center gap-6">
-        {/* Trust Badge */}
+      {/* Main Hero Content: Left-Down Corner Composition */}
+      <div className="relative z-10 w-full max-w-7xl mt-auto pt-16 sm:pt-24 pb-4">
+        {/* Category Pill */}
         <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0 }}
-          className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 backdrop-blur-md"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-surface-border bg-surface-card/60 backdrop-blur-sm mb-6"
         >
-          <Zap className="w-4 h-4 text-purple-400 fill-purple-400" />
-          <span className="text-xs sm:text-sm font-medium text-purple-300">
-            72-Hour Delivery Guarantee — Live or We Refund
+          <Sparkles className="w-3.5 h-3.5 text-tertiary" />
+          <span className="text-xs font-semibold tracking-wider uppercase text-ink">
+            Awwwards-Caliber Digital Agency
           </span>
         </motion.div>
 
-        {/* Headline */}
+        {/* Massive H1 Heading - Arial 900 specification */}
         <motion.h1
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.1 }}
-          className="font-heading font-extrabold text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="font-heading font-black text-ink text-[clamp(2.75rem,8.5vw,10.5rem)] leading-[0.92] tracking-hero uppercase select-none"
         >
-          Your Business Deserves a Website.{" "}
-          <span className="bg-gradient-to-r from-purple-400 via-purple-300 to-orange-400 bg-clip-text text-transparent block mt-1">
-            Not a Bank Loan.
-          </span>
+          WE BUILD
+          <br />
+          <span className="text-secondary">DIGITAL EMPIRES</span>
+          <br />
+          <span className="text-transparent [-webkit-text-stroke:1.5px_#1C1917] sm:[-webkit-text-stroke:2.5px_#1C1917] hover:text-ink transition-colors duration-500">
+            FOR AMBITIOUS
+          </span>{" "}
+          <span className="text-tertiary">BRANDS.</span>
         </motion.h1>
 
-        {/* Subheadline */}
-        <motion.p
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.2 }}
-          className="font-body text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed font-normal"
-        >
-          Get a sleek, mobile-ready landing page for your business — flat ₹14,999, no surprises, no callbacks. Most clients go live in 72 hours.
-        </motion.p>
-
-        {/* CTA Buttons Row */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.25 }}
-          className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto justify-center mt-2"
-        >
-          <WhatsAppButton
-            message={WA_MESSAGES.hero}
-            label="Get My Website Now →"
-            size="lg"
-            variant="primary"
-            className="w-full sm:w-auto"
-          />
-          <a
-            href="#portfolio"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-purple-500/50 text-purple-300 hover:text-white px-6 py-3.5 font-semibold text-base hover:bg-purple-500/10 transition-all duration-300 w-full sm:w-auto"
+        {/* Narrative Punchline + CTAs Row */}
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7"
           >
-            <Eye className="w-5 h-5 text-purple-400" />
-            <span>See Our Work</span>
-          </a>
-        </motion.div>
+            <p className="font-body text-ink-muted text-base sm:text-xl lg:text-2xl leading-relaxed max-w-2xl">
+              We engineer bespoke 3D web experiences, high-conversion digital architecture, and iconic brand identities that command authority and turn visitors into devoted advocates.
+            </p>
 
-        {/* Trust Badges Row */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.3 }}
-          className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400 pt-2"
-        >
-          <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4 text-green-400" />
-            <span>100% Advance — No Surprises</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-purple-400" />
-            <span>72-Hour Delivery</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <RefreshCw className="w-4 h-4 text-orange-400" />
-            <span>2 Free Revisions</span>
-          </div>
-        </motion.div>
-
-        {/* Hero Mockup */}
-        <motion.div
-          variants={scaleIn}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.35 }}
-          className="w-full max-w-3xl mt-8 rounded-2xl border border-purple-500/20 bg-white/5 backdrop-blur-md shadow-2xl p-3 sm:p-4 animate-float"
-        >
-          {/* Browser Chrome Header */}
-          <div className="flex items-center gap-2 px-3 py-2 bg-surface-card rounded-t-xl border-b border-surface-border">
-            <div className="flex items-center gap-1.5">
-              <div className="w-3 h-3 rounded-full bg-red-500/80" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-              <div className="w-3 h-3 rounded-full bg-green-500/80" />
+            {/* Micro value props */}
+            <div className="flex flex-wrap items-center gap-6 mt-6 font-mono text-xs text-ink uppercase tracking-wider">
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                Zero Templates
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-tertiary" />
+                Sub-Second Speed
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-ink" />
+                Bespoke 3D Motion
+              </span>
             </div>
-            <div className="mx-auto bg-surface-DEFAULT/80 border border-white/10 rounded-md px-4 py-1 text-xs text-gray-400 flex items-center gap-2 w-full max-w-sm justify-center font-mono">
-              <span className="text-green-400 text-[10px]">🔒 https://</span>mybusiness.com
-            </div>
-          </div>
+          </motion.div>
 
-          {/* SVG Preview Illustration */}
-          <div className="bg-surface-DEFAULT rounded-b-xl p-4 sm:p-6 overflow-hidden">
-            <svg
-              viewBox="0 0 800 420"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-auto rounded-lg"
+          {/* Interactive Action Cluster */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch sm:items-center gap-4 lg:justify-end"
+          >
+            <MagneticButton
+              id="hero-cta-primary"
+              href={`${WHATSAPP_BASE}?text=${WA_MESSAGES.hero}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
             >
-              {/* Header bar */}
-              <rect x="0" y="0" width="800" height="40" rx="4" fill="#13132B" />
-              <rect x="20" y="14" width="80" height="12" rx="3" fill="#7C3AED" />
-              <rect x="580" y="14" width="50" height="12" rx="3" fill="#6B7280" opacity="0.4" />
-              <rect x="645" y="14" width="50" height="12" rx="3" fill="#6B7280" opacity="0.4" />
-              <rect x="710" y="10" width="70" height="20" rx="10" fill="#25D366" />
+              <div className="flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-secondary text-white font-heading font-bold text-sm sm:text-base tracking-wide hover:bg-secondary-dark transition-all duration-300 shadow-lg hover:shadow-xl group">
+                <span>START A PROJECT</span>
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </div>
+            </MagneticButton>
 
-              {/* Hero Banner */}
-              <rect x="0" y="50" width="800" height="180" rx="8" fill="url(#hero-grad)" />
-              <rect x="200" y="80" width="400" height="24" rx="4" fill="#FFFFFF" opacity="0.9" />
-              <rect x="260" y="115" width="280" height="14" rx="3" fill="#A78BFA" opacity="0.8" />
-              <rect x="330" y="150" width="140" height="36" rx="18" fill="#F97316" />
+            <MagneticButton
+              id="hero-cta-secondary"
+              href="#services"
+              className="w-full sm:w-auto"
+            >
+              <div className="flex items-center justify-center gap-3 px-8 py-4 rounded-full border border-surface-border bg-white/70 backdrop-blur-sm text-ink font-heading font-semibold text-sm sm:text-base tracking-wide hover:border-secondary transition-all duration-300">
+                <span>EXPLORE WORK</span>
+                <ArrowDownRight className="w-4 h-4 text-ink-muted" />
+              </div>
+            </MagneticButton>
+          </motion.div>
+        </div>
+      </div>
 
-              {/* 3 Column Feature Cards */}
-              <rect x="0" y="245" width="250" height="120" rx="8" fill="#13132B" stroke="#1E1E3A" strokeWidth="2" />
-              <circle cx="35" cy="275" r="14" fill="#7C3AED" opacity="0.3" />
-              <rect x="60" y="270" width="150" height="12" rx="3" fill="#FFFFFF" opacity="0.8" />
-              <rect x="25" y="300" width="200" height="8" rx="2" fill="#6B7280" opacity="0.5" />
-              <rect x="25" y="316" width="160" height="8" rx="2" fill="#6B7280" opacity="0.5" />
-
-              <rect x="275" y="245" width="250" height="120" rx="8" fill="#13132B" stroke="#7C3AED" strokeWidth="2" />
-              <circle cx="310" cy="275" r="14" fill="#F97316" opacity="0.3" />
-              <rect x="335" y="270" width="150" height="12" rx="3" fill="#FFFFFF" opacity="0.8" />
-              <rect x="300" y="300" width="200" height="8" rx="2" fill="#6B7280" opacity="0.5" />
-              <rect x="300" y="316" width="160" height="8" rx="2" fill="#6B7280" opacity="0.5" />
-
-              <rect x="550" y="245" width="250" height="120" rx="8" fill="#13132B" stroke="#1E1E3A" strokeWidth="2" />
-              <circle cx="585" cy="275" r="14" fill="#25D366" opacity="0.3" />
-              <rect x="610" y="270" width="150" height="12" rx="3" fill="#FFFFFF" opacity="0.8" />
-              <rect x="575" y="300" width="200" height="8" rx="2" fill="#6B7280" opacity="0.5" />
-              <rect x="575" y="316" width="160" height="8" rx="2" fill="#6B7280" opacity="0.5" />
-
-              {/* Bottom CTA section */}
-              <rect x="0" y="380" width="800" height="40" rx="6" fill="#7C3AED" opacity="0.2" />
-              <rect x="300" y="394" width="200" height="12" rx="3" fill="#FFFFFF" opacity="0.9" />
-
-              <defs>
-                <linearGradient id="hero-grad" x1="0" y1="50" x2="800" y2="230" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#1E1E3A" />
-                  <stop offset="0.5" stopColor="#2A1B4E" />
-                  <stop offset="1" stopColor="#13132B" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-        </motion.div>
+      {/* Bottom Ticker / Scroll Prompt */}
+      <div className="relative z-10 w-full pt-8 flex items-center justify-between border-t border-surface-border/60">
+        <span className="font-mono text-xs text-ink-muted uppercase tracking-widest hidden sm:inline-block">
+          SCROLL TO EXPLORE
+        </span>
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-[1px] bg-surface-border" />
+          <span className="font-mono text-xs text-ink-muted uppercase">01 / 06</span>
+        </div>
       </div>
     </section>
   );

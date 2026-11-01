@@ -12,60 +12,51 @@ export default function RevisionModal() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={closeModal}
-        className="fixed inset-0 bg-black/70 backdrop-blur-sm"
+        className="fixed inset-0 bg-ink/60 backdrop-blur-sm"
       />
 
-      {/* Modal Panel */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+        initial={{ opacity: 0, scale: 0.96, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        className="relative z-10 w-full max-w-2xl bg-surface-card border border-surface-border rounded-2xl p-6 md:p-8 max-h-[80vh] overflow-y-auto shadow-2xl text-left"
+        exit={{ opacity: 0, scale: 0.96, y: 20 }}
+        className="relative z-10 w-full max-w-2xl bg-surface-card border border-surface-border rounded-2xl p-6 sm:p-10 max-h-[85vh] overflow-y-auto shadow-2xl text-left"
       >
         <button
           onClick={closeModal}
-          className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white rounded-full hover:bg-white/10 transition-colors"
+          className="absolute top-5 right-5 p-2 text-ink-muted hover:text-ink rounded-full hover:bg-primary transition-colors"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
         </button>
 
-        <h3 className="text-2xl font-bold text-white mb-6 font-heading border-b border-surface-border pb-4">
-          Revision Policy
+        <h3 className="text-2xl sm:text-3xl font-extrabold text-ink mb-6 font-heading border-b border-surface-border pb-4 uppercase tracking-tight">
+          Creative Revision Scope
         </h3>
 
-        <div className="space-y-6 text-gray-300 font-body text-sm md:text-base leading-relaxed">
+        <div className="space-y-6 text-ink-muted font-body text-sm sm:text-base leading-relaxed">
           <section>
-            <h4 className="text-white font-semibold text-lg mb-2">1. What's Included</h4>
+            <h4 className="text-ink font-bold text-base sm:text-lg mb-1">1. Collaborative Feedback Rounds</h4>
             <p>
-              Your ₹14,999 package includes 2 free revision rounds after viewing the initial preview link.
+              Each phase incorporates dedicated revision iterations to calibrate aesthetics, typography nuances, and motion choreography before code freeze.
             </p>
           </section>
 
           <section>
-            <h4 className="text-white font-semibold text-lg mb-2">2. What Counts as a Revision</h4>
+            <h4 className="text-ink font-bold text-base sm:text-lg mb-1">2. Revision Scope Definition</h4>
             <p>
-              Each revision round covers tweaking layouts, updating copy/text, adjusting color accents, re-ordering sections, or replacing images. Each revision round covers multiple changes submitted together. Please consolidate all feedback before submitting.
+              Revisions include refining copy typography, color grading, spacing architecture, animation timing curves, and media asset exchanges.
             </p>
           </section>
 
           <section>
-            <h4 className="text-white font-semibold text-lg mb-2">3. What Doesn't Count as a Revision</h4>
+            <h4 className="text-ink font-bold text-base sm:text-lg mb-1">3. Expansion & New Capabilities</h4>
             <p>
-              Major feature additions (contact forms, booking systems, galleries) or complete design overhauls are scoped and priced separately.
-            </p>
-          </section>
-
-          <section>
-            <h4 className="text-white font-semibold text-lg mb-2">4. Round Consumption & Extra Rounds</h4>
-            <p>
-              A revision round is not consumed until you explicitly request changes after viewing the preview. Additional revision rounds beyond the included 2 rounds can be purchased for ₹500/round.
+              New structural features or major scope expansions outside the initial specification are seamlessly handled via dedicated milestone addenda.
             </p>
           </section>
         </div>

@@ -3,61 +3,119 @@
 @tailwind utilities;
 
 :root {
-  --background: #0D0D1A;
-  --foreground: #F9FAFB;
+  --background: #EAE6DE;
+  --foreground: #1C1917;
+  --primary: #EAE6DE;
+  --secondary: #226192;
+  --tertiary: #EF8557;
+  --surface-alt: #F5F1EB;
+  --surface-border: #D6D0C4;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #0D0D1A;
-  color: #F9FAFB;
+  background-color: #EAE6DE;
+  color: #1C1917;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #EAE6DE;
+  color: #1C1917;
+  overflow-x: hidden;
+  position: relative;
 }
 
 ::selection {
-  background: #7C3AED;
+  background: #226192;
   color: #FFFFFF;
 }
 
-/* Custom Scrollbar */
+/* Custom Minimalist Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0D0D1A;
+  background: #EAE6DE;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #7C3AED;
-  border-radius: 4px;
+  background: #226192;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5B21B6;
+  background: #18476B;
 }
 
-/* Mesh Gradient Background */
-.mesh-gradient {
-  background: radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 60%),
-              radial-gradient(ellipse at 80% 20%, rgba(249, 115, 22, 0.10) 0%, transparent 60%),
-              radial-gradient(ellipse at 60% 80%, rgba(37, 99, 235, 0.10) 0%, transparent 60%),
-              #0D0D1A;
-  background-size: 200% 200%;
-  animation: mesh-shift 8s ease infinite alternate;
+/* Subtle Film Grain Texture Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* Infinite Marquee Animation */
+/* Liquid Glass Cards */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(214, 208, 196, 0.6);
+}
+
+.glass-panel-dark {
+  background: rgba(34, 97, 146, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Infinite Marquee */
 @keyframes marquee {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-33.333%);
+    transform: translateX(-50%);
   }
 }
 
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Pin Section Helpers for GSAP */
+.horizontal-scroll-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,29 +1,26 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import PainPoints from "@/components/PainPoints";
-import Solution from "@/components/Solution";
-import ComparisonMatrix from "@/components/ComparisonMatrix";
+import Marquee from "@/components/Marquee";
+import Services from "@/components/Services";
 import Process from "@/components/Process";
-import Portfolio from "@/components/Portfolio";
+import Work from "@/components/Work";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
-import FinalCTA from "@/components/FinalCTA";
+import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative overflow-hidden">
-      <div className="mesh-gradient fixed inset-0 -z-10 opacity-60 pointer-events-none" />
+    <main className="relative bg-primary min-h-screen text-ink selection:bg-secondary selection:text-white">
       <Navbar />
       <Hero />
-      <PainPoints />
-      <Solution />
-      <ComparisonMatrix />
+      <Marquee />
+      <Services />
       <Process />
-      <Portfolio />
+      <Work />
       <Testimonials />
-      <FinalCTA />
       <FAQ />
+      <CTA />
       <Footer />
     </main>
   );
