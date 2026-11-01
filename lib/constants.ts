@@ -4,7 +4,7 @@ export const DOMAIN = "webleos.com";
 export const EMAIL = "webleos26@gmail.com";
 export const WHATSAPP_NUMBER = "9461811297";
 export const WHATSAPP_BASE = `https://wa.me/${WHATSAPP_NUMBER}`;
-export const INSTAGRAM_URL = "https://www.instagram.com/ilakshayyy";
+export const INSTAGRAM_URL = "https://www.instagram.com/webleos";
 
 export const WA_MESSAGES = {
   hero: encodeURIComponent("Hi Webleos! I'm interested in building a new website for my business. Can we discuss?"),

@@ -206,7 +206,7 @@ export default function Footer() {
       {/* Bottom Legal / Studio Coordinates */}
       <div className="max-w-7xl mx-auto pt-8 border-t border-surface-border flex flex-col sm:flex-row items-center justify-between font-mono text-xs text-ink-subtle gap-4">
         <p>webleos.com · Registered Agency &amp; Domain Owner</p>
-        <p>WhatsApp: +91 {WHATSAPP_NUMBER} · {EMAIL}</p>
+        <p>{EMAIL}</p>
       </div>
     </footer>
   );
