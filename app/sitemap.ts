@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://webleos.com';
+  const baseUrl = 'https://www.webleos.com';
   return [
     {
       url: baseUrl,

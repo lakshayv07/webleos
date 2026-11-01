@@ -9,7 +9,7 @@ import RevisionModal from "@/components/modals/RevisionModal";
 import { AnimatePresence } from "framer-motion";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://webleos.com"),
+  metadataBase: new URL("https://www.webleos.com"),
   title: {
     default: "Webleos — Digital Agency & Design Studio | Web Experiences That Convert",
     template: "%s | Webleos",
@@ -29,11 +29,11 @@ export const metadata: Metadata = {
     "creative development",
     "modern web design",
   ],
-  authors: [{ name: "Webleos Studio", url: "https://webleos.com" }],
+  authors: [{ name: "Webleos Studio", url: "https://www.webleos.com" }],
   creator: "Webleos",
   publisher: "Webleos",
   alternates: {
-    canonical: "https://webleos.com",
+    canonical: "https://www.webleos.com",
   },
   openGraph: {
     title: "Webleos — Digital Agency & Design Studio",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-placeholder",
+    google: "2iONhRT1ZePBiTDsO9Se5GnHB9tfh3gaYAvp6vNam2g",
   },
 };
 
