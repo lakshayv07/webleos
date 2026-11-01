@@ -11,11 +11,11 @@ import { AnimatePresence } from "framer-motion";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.webleos.com"),
   title: {
-    default: "Webleos — Digital Agency & Design Studio | Web Experiences That Convert",
+    default: "Webleos | Web Design & Development Agency",
     template: "%s | Webleos",
   },
   description:
-    "Webleos is an award-winning digital agency engineering high-converting websites, 3D interactive experiences, and distinct brand identities for ambitious global brands.",
+    "Webleos designs and develops modern websites, high-converting landing pages and digital experiences for businesses. Explore our web development, SEO and digital services.",
   keywords: [
     "digital agency",
     "web design studio",
@@ -29,24 +29,24 @@ export const metadata: Metadata = {
     "creative development",
     "modern web design",
   ],
-  authors: [{ name: "Webleos Studio", url: "https://www.webleos.com" }],
+  authors: [{ name: "Webleos", url: "https://www.webleos.com" }],
   creator: "Webleos",
   publisher: "Webleos",
   alternates: {
     canonical: "https://www.webleos.com",
   },
   openGraph: {
-    title: "Webleos — Digital Agency & Design Studio",
+    title: "Webleos | Web Design & Development Agency",
     description:
-      "We engineer high-converting digital experiences, 3D interactive web products, and iconic brand identities for ambitious brands worldwide.",
-    url: "https://webleos.com",
+      "Modern websites, landing pages and digital experiences designed to help businesses grow.",
+    url: "https://www.webleos.com",
     siteName: "Webleos",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/webleos.png",
         width: 1200,
         height: 630,
-        alt: "Webleos — Digital Agency & Design Studio",
+        alt: "Webleos | Web Design & Development Agency",
       },
     ],
     locale: "en_US",
