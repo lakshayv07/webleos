@@ -134,8 +134,31 @@ const FAQS = [
 ];
 
 export default function HowItWorksPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://webleos.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "How It Works",
+        item: "https://webleos.com/how-it-works",
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-primary text-ink selection:bg-secondary selection:text-white flex flex-col justify-between">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Top Header / Navigation Bar */}
       <header className="sticky top-0 z-50 bg-primary/90 backdrop-blur-md border-b border-surface-border py-4 px-6 sm:px-10 lg:px-16">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -143,7 +166,7 @@ export default function HowItWorksPage() {
             <div className="relative w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center group-hover:scale-105 transition-transform">
               <Image
                 src="/webleos.png"
-                alt="Webleos Logo"
+                alt="Webleos - Web Design & Digital Growth Agency"
                 width={40}
                 height={40}
                 className="w-full h-full object-contain"
