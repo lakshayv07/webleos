@@ -65,7 +65,7 @@ export default function Hero() {
         >
           <Sparkles className="w-3.5 h-3.5 text-tertiary" />
           <span className="text-xs font-semibold tracking-wider uppercase text-ink">
-            Awwwards-Caliber Digital Agency
+            Webleos · Awwwards-Caliber Digital Agency
           </span>
         </motion.div>
 
@@ -76,6 +76,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="font-heading font-black text-ink text-[clamp(2.75rem,8.5vw,10.5rem)] leading-[0.92] tracking-hero uppercase select-none"
         >
+          <span className="sr-only">Webleos — </span>
           WE BUILD
           <br />
           <span className="text-secondary">DIGITAL EMPIRES</span>
@@ -95,7 +96,7 @@ export default function Hero() {
             className="lg:col-span-7"
           >
             <p className="font-body text-ink-muted text-base sm:text-xl lg:text-2xl leading-relaxed max-w-2xl">
-              We engineer bespoke 3D web experiences, high-conversion digital architecture, and iconic brand identities that command authority and turn visitors into devoted advocates.
+              At Webleos, we engineer bespoke 3D web experiences, high-conversion digital architecture, and iconic brand identities that command authority and turn visitors into devoted advocates.
             </p>
 
             {/* Micro value props */}

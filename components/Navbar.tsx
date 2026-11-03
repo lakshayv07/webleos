@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { BRAND_NAME, WA_MESSAGES, WHATSAPP_BASE } from "@/lib/constants";
@@ -37,11 +38,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
         {/* Brand Logo & Name */}
-        <a href="/#hero" className="flex items-center gap-3 group">
+        <Link href="/" aria-label="Webleos — Web Design & Digital Growth Agency" className="flex items-center gap-3 group">
           <div className="relative w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center group-hover:scale-105 transition-transform">
             <Image
               src="/webleos.png"
-              alt="Webleos Logo"
+              alt="Webleos - Web Design & Digital Growth Agency"
               width={40}
               height={40}
               className="w-full h-full object-contain"
@@ -52,7 +53,7 @@ export default function Navbar() {
             {BRAND_NAME}
             <span className="text-tertiary font-serif ml-0.5">.</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">

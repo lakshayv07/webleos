@@ -60,6 +60,10 @@ pnpm-debug.log*
 .turbo
 .vercel
 
+# agents & local skills
+.agent/
+.agents/skills/seo/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
